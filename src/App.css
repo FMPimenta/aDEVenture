@@ -4,16 +4,18 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: gainsboro;
 }
 
-.App-link {
+a {
   color: #61dafb;
 }
 
 .Banner {
   color: #61dafb;
+  margin-bottom: 5%;
 }
 
 .Footer {
-  color: gainsboro;
+  margin-top: 5%;
 }
