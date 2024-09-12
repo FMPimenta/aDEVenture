@@ -1,6 +1,4 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import { Row, Col } from 'react-bootstrap';
 
 import { observer } from "mobx-react-lite";
 
@@ -11,19 +9,19 @@ function EnvList({store}) {
     }
     
     return (
-        <Row>
+        <div>
             {store.envs.map((env) => {
                 return(
-                    <Col>
-                        <div className='mr-2 env Clicker'>
-                            <h3>{env.name} Features: <p>{env.features}</p></h3>
-                            <Button className='mb-2' onClick={() => handleUpdateEnv(env.id)}>Develop</Button>
+                    <div key={env.name}>
+                        <div className='mr-2 mb-2 bg-teal-900 text-slate-200'>
+                            <p className='text-start ms-2'>{env.name} {env.features}</p>
+                            <button className='mb-2' onClick={() => handleUpdateEnv(env.id)}>Develop</button>
                         </div>
-                    </Col>
+                    </div>
                 )
             })}
-        </Row>
-    );
+        </div>
+    )
 }
 
 export default observer(EnvList);
